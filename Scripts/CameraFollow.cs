@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
@@ -11,12 +12,15 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        float targetY = target.position.y + yOffset;
-        float currentY = transform.position.y;
-        if (targetY > currentY)
+        if (target != null)
         {
-            float newY = Mathf.Lerp(currentY, targetY, Time.deltaTime);
-            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
-        }
+            float targetY = target.position.y + yOffset;
+            float currentY = transform.position.y;
+            if (targetY > currentY)
+            {
+                float newY = Mathf.Lerp(currentY, targetY, Time.deltaTime);
+                transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+            }
+        }     
     }
 }
