@@ -1,2 +1,2 @@
-# doodle-jump
+# Doodle-jump
 Trying to do a Doodle Jump on Unity
