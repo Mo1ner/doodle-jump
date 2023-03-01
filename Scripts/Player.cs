@@ -28,11 +28,6 @@ public class Player : MonoBehaviour
        {
           _rb.AddForce(new Vector2(0, _jumpForce), ForceMode2D.Impulse);
        }
-
-        if (col.gameObject.CompareTag("Destroyer"))
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void Move(Vector2 direction)

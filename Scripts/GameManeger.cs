@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManeger : MonoBehaviour
 {
     [SerializeField] private Transform obj;
-    [SerializeField] float teleportOffset = 1f;
+    [SerializeField] private float teleportOffset = 1f;
 
     private void Update()
     {
